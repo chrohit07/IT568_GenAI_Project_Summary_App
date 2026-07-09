@@ -1,0 +1,21 @@
+{
+  "name": "summarybot-non-functional-tests",
+  "version": "1.0.0",
+  "description": "Non-functional tests: Performance, Security, Reliability, Usability for SummaryBot",
+  "scripts": {
+    "test": "mocha",
+    "test:performance": "mocha tests/performance.test.js --reporter mochawesome --reporter-option reportDir=reports,reportFilename=performance-report,charts=true,inline=true --timeout 60000 --exit",
+    "test:security": "mocha tests/security.test.js --reporter mochawesome --reporter-option reportDir=reports,reportFilename=security-report,charts=true,inline=true --timeout 30000 --exit",
+    "test:reliability": "mocha tests/reliability.test.js --reporter mochawesome --reporter-option reportDir=reports,reportFilename=reliability-report,charts=true,inline=true --timeout 60000 --exit",
+    "test:usability": "mocha tests/usability.test.js --reporter mochawesome --reporter-option reportDir=reports,reportFilename=usability-report,charts=true,inline=true --timeout 30000 --exit",
+    "test:all": "mocha tests/*.test.js --reporter mochawesome --reporter-option reportDir=reports,reportFilename=non-functional-report,charts=true,inline=true --timeout 60000 --exit"
+  },
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
+    "supertest": "^7.0.0",
+    "socket.io-client": "^4.7.5"
+  }
+}

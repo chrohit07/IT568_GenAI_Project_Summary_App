@@ -1,0 +1,43 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0e0e0c;
+  --bg1:       #141412;
+  --bg2:       #1c1c19;
+  --bg3:       #242420;
+  --border:    rgba(255,255,255,0.07);
+  --border2:   rgba(255,255,255,0.12);
+  --text:      #e8e5d8;
+  --text2:     #8a8778;
+  --text3:     #5a5950;
+  --accent:    #c8f07a;
+  --accent-bg: rgba(200,240,122,0.08);
+  --accent-dk: #4a6a10;
+  --red:       #f07a7a;
+  --red-bg:    rgba(240,122,122,0.08);
+  --mono:      'IBM Plex Mono', monospace;
+  --serif:     'Instrument Serif', Georgia, serif;
+  --radius:    6px;
+  --radius-lg: 10px;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  overflow: hidden;
+}
+
+input, select, button, textarea {
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 2px; }

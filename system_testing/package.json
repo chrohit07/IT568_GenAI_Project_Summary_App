@@ -1,0 +1,17 @@
+{
+  "name": "summarybot-system-tests",
+  "version": "1.0.0",
+  "description": "Black-box system and acceptance tests for SummaryBot REST API + Socket.io",
+  "scripts": {
+    "test": "mocha",
+    "test:report": "mocha"
+  },
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
+    "socket.io-client": "^4.7.5",
+    "supertest": "^7.0.0"
+  }
+}

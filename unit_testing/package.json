@@ -1,0 +1,21 @@
+{
+  "name": "summarybot-unit-tests",
+  "version": "1.0.0",
+  "description": "White-box unit tests for SummaryBot server logic",
+  "scripts": {
+    "test": "nyc mocha tests/unit.test.js --reporter mochawesome --reporter-option reportDir=reports,reportFilename=unit-test-report,charts=true,inline=true --timeout 10000 --exit"
+  },
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.4.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^17.0.1"
+  },
+  "nyc": {
+    "include": ["logic.js"],
+    "reporter": ["html", "text"],
+    "report-dir": "./reports/coverage"
+  }
+}
